@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack",
-    "dev-server": "webpack-dev-server"
+    "dev-server": "webpack-dev-server",
+    "test": "jest"
   },
   "dependencies": {
     "babel-core": "6.25.0",
@@ -30,5 +31,8 @@
     "uuid": "3.1.0",
     "webpack": "3.1.0",
     "webpack-dev-server": "2.5.1"
+  },
+  "devDependencies": {
+    "jest": "20.0.4"
   }
 }
