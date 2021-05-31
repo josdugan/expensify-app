@@ -1,5 +1,5 @@
 import moment from 'moment';
-import { ADD_EXPENSE, REMOVE_EXPENSE, EDIT_EXPENSE } from '../../actions/expenses';
+import { ADD_EXPENSE, REMOVE_EXPENSE, EDIT_EXPENSE, SET_EXPENSES } from '../../actions/expenses';
 import expensesReducer from '../../reducers/expenses';
 import expenses from '../fixtures/expenses';
 
@@ -68,6 +68,16 @@ test('should not edit expense if expense not found', () => {
         updates: {
             amount: editedAmount
         }
+    };
+    const state = expensesReducer(expenses, action);
+
+    expect(state).toEqual(expenses);
+});
+
+test('should set expenses', () => {
+    const action = {
+        type: SET_EXPENSES,
+        expenses
     };
     const state = expensesReducer(expenses, action);
 
